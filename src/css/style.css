@@ -1,0 +1,231 @@
+/* 
+  Elite Portfolio Website - Custom CSS overrides and animations
+  Designed for Performance & Premium UI
+*/
+
+/* --- Google Fonts (Poppins for Headings, Inter for Body) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* --- Custom Variables --- */
+:root {
+  --color-bg: #020617; /* slate-950 */
+  --color-primary: #3b82f6; /* Cyber Blue */
+  --color-secondary: #f97316; /* Earth Orange */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(59, 130, 246, 0.2);
+  --glass-border-hover: rgba(59, 130, 246, 0.5);
+  --timeline-glow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+/* --- Base Enhancements --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: #e2e8f0; /* slate-200 */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Custom Scrollbar (Premium Vibe) --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b; 
+  border-radius: 5px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6; 
+}
+
+/* --- Glassmorphism Utilities --- */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(59, 130, 246, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Glass Navbar (specifically slightly more opaque) */
+.glass-nav {
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-nav.scrolled {
+  background: rgba(2, 6, 23, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* --- Link Hover Effects --- */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Button / Interactive Glow --- */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Glow Border Button Effect */
+.btn-outline {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: inset 0 0 15px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+
+/* --- Timeline Specifics --- */
+.timeline-line {
+  position: absolute;
+  left: 19px; /* Centered in the 40px icon circle */
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #1e293b, var(--color-primary) 50%, #1e293b);
+  opacity: 0.3;
+}
+
+.timeline-node {
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover .timeline-node {
+  box-shadow: var(--timeline-glow);
+  background-color: var(--color-primary);
+  border-color: #60a5fa;
+}
+
+/* --- Mobile Menu Animation --- */
+#mobile-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#mobile-menu-content {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Scroll Entrance Animations (Intersection Observer Targets) --- */
+.reveal, .reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+
+/* These classes are added by JS when element enters viewport */
+.reveal.active, .reveal-up.active, .reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Stagger delays for children */
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+.stagger-5 { transition-delay: 500ms; }
+
+/* --- Bento Grid Specifics --- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 240px;
+  }
+  
+  .bento-item-ai { grid-column: span 8; grid-row: span 2; }
+  .bento-item-systems { grid-column: span 4; grid-row: span 1; }
+  .bento-item-dev { grid-column: span 4; grid-row: span 1; }
+  .bento-item-adv { grid-column: span 12; grid-row: span 1; }
+}
+
+@media (min-width: 1024px) {
+  /* Refining for large desktop */
+  .bento-item-ai { grid-column: span 7; grid-row: span 2; }
+  .bento-item-systems { grid-column: span 5; grid-row: span 1; }
+  .bento-item-dev { grid-column: span 5; grid-row: span 2; }
+  .bento-item-adv { grid-column: span 7; grid-row: span 1; }
+}

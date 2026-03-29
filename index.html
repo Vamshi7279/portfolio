@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonuguntla Vamshi Krishna | AI Engineer & Tech Innovator</title>
+    <meta name="description" content="Portfolio of Vamshi, a 3rd Year B.Tech (CSE - AIML) student specializing in Artificial Intelligence, Machine Learning, and Deep Tech Systems.">
+    
+    <!-- Script: Tailwind CLI (Play CDN) configured for production-grade styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            'bg': '#020617',          /* slate-950 */
+                            'primary': '#3b82f6',     /* Cyber Blue */
+                            'secondary': '#f97316',   /* Earth Orange */
+                            'accent': '#60a5fa',      /* blue-400 */
+                            'surface': 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(59, 130, 246, 0.3)',
+                        'glow-primary': '0 0 25px rgba(59, 130, 246, 0.5)',
+                    },
+                    container: {
+                        center: true,
+                        padding: {
+                            DEFAULT: '1rem',
+                            sm: '2rem',
+                            lg: '4rem',
+                            xl: '5rem',
+                        },
+                        screens: {
+                            sm: '100%',
+                            md: '100%',
+                            lg: '1024px',
+                            xl: '1200px', // Strict max-width constraint
+                            '2xl': '1200px',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body class="bg-brand-bg text-slate-200 font-body antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <header id="top-nav" class="fixed top-0 left-0 w-full z-50 glass-nav py-4 transition-all duration-300">
+        <div class="container mx-auto max-w-[1200px] flex items-center justify-between px-6 lg:px-8">
+            <!-- Brand -->
+            <a href="#" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-white group inline-block">
+                <span class="text-brand-primary group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all">V</span>AMSHI KRISHNA<span class="text-brand-primary font-black ml-1 text-3xl">.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="nav-link text-sm font-medium hover:text-white transition-colors">Home</a>
+                <a href="#education" class="nav-link text-sm font-medium hover:text-white transition-colors">Education</a>
+                <a href="#skills" class="nav-link text-sm font-medium hover:text-white transition-colors">Skills</a>
+                <a href="#work" class="nav-link text-sm font-medium hover:text-white transition-colors">Work</a>
+                <a href="#contact" class="nav-link text-sm font-medium hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Desktop -->
+            <div class="hidden md:block">
+                <a href="cv.html" class="btn-primary rounded-full px-6 py-2.5 text-sm font-semibold text-white shadow-glow">
+                    Download CV
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary transition-colors z-[60]">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md invisible opacity-0 transition-all duration-300 md:hidden">
+        <div id="mobile-menu-content" class="absolute right-0 top-0 bottom-0 w-[280px] bg-slate-900 border-l border-white/5 shadow-2xl p-8 flex flex-col pt-24 translate-x-full transition-transform duration-300">
+            <nav class="flex flex-col gap-6">
+                <a href="#hero" class="mobile-link text-xl font-medium text-slate-200 hover:text-brand-primary transition-colors">Home</a>
+                <a href="#education" class="mobile-link text-xl font-medium text-slate-200 hover:text-brand-primary transition-colors">Education</a>
+                <a href="#skills" class="mobile-link text-xl font-medium text-slate-200 hover:text-brand-primary transition-colors">Skills</a>
+                <a href="#work" class="mobile-link text-xl font-medium text-slate-200 hover:text-brand-primary transition-colors">Work</a>
+                <a href="#contact" class="mobile-link text-xl font-medium text-slate-200 hover:text-brand-primary transition-colors">Contact</a>
+            </nav>
+            <div class="mt-auto pb-8">
+                <a href="cv.html" class="w-full flex justify-center btn-primary rounded-xl px-6 py-3 text-base font-semibold text-white">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- === HERO SECTION === -->
+        <section id="hero" class="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat opacity-[0.15] mix-blend-luminosity"></div>
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 z-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent"></div>
+            <div class="absolute inset-0 z-0 bg-gradient-to-r from-brand-bg/90 via-transparent to-brand-bg/90"></div>
+            
+            <div class="container relative z-10 mx-auto max-w-[1200px] px-6 lg:px-8 flex flex-col items-center text-center reveal-up">
+                <!-- Profile Picture (Small & Attractive) -->
+                <div class="relative w-28 h-28 md:w-32 md:h-32 mb-6 rounded-full overflow-hidden glass-panel border-2 border-brand-primary/40 p-1 mx-auto shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] group hover:-translate-y-2 transition-all duration-500 reveal-up text-center">
+                    <div class="w-full h-full rounded-full overflow-hidden bg-slate-800">
+                        <img src="assets/profile.png" alt="Gonuguntla Vamshi Krishna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8 text-sm font-medium text-brand-accent shadow-glow border-white/10 reveal-up stagger-1">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
+                    </span>
+                    Available for Opportunities
+                </div>
+                
+                <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-2xl reveal-up stagger-2">
+                    Gonuguntla Vamshi Krishna <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">AI Engineer</span> & <br class="hidden md:block"/>
+                    Tech Innovator
+                </h1>
+                
+                <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 font-light mb-10 leading-relaxed reveal-up stagger-3">
+                    3rd Year B.Tech (CSE - AIML) student at Malla Reddy University. Engineering intelligent systems with a focus on Deep Tech and real-world impact.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-4 reveal-up stagger-4">
+                    <a href="#work" class="w-full sm:w-auto btn-primary rounded-full px-8 py-3.5 text-base font-semibold text-white shadow-glow-primary hover:px-10 transition-all">
+                        View Work
+                    </a>
+                    <a href="cv.html" class="w-full sm:w-auto btn-outline rounded-full px-8 py-3.5 text-base font-semibold text-white hover:border-brand-primary group flex items-center justify-center gap-2">
+                        Download CV
+                        <svg class="w-4 h-4 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60">
+                <span class="text-xs font-medium tracking-widest text-slate-400 uppercase">Scroll</span>
+                <svg class="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </div>
+        </section>
+
+
+        <!-- === EDUCATION TIMELINE === -->
+        <section id="education" class="py-20 md:py-32 relative">
+            <div class="container mx-auto max-w-[1200px] px-6 lg:px-8">
+                <div class="mb-16 reveal-up">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Academic Journey</h2>
+                    <div class="h-1 w-20 bg-brand-primary rounded-full"></div>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative pl-6 md:pl-0 max-w-4xl mx-auto">
+                    <!-- Central Line (Desktop) / Left Line (Mobile) -->
+                    <div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-brand-primary/20 via-brand-primary to-brand-bg -translate-x-1/2 z-0 opacity-50"></div>
+                    <div class="md:hidden absolute left-8 top-4 bottom-4 w-0.5 bg-gradient-to-b from-brand-primary/20 via-brand-primary to-brand-bg z-0 opacity-50"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 reveal-up">
+                        <div class="md:w-5/12 flex justify-end pr-8 order-2 md:order-1 mt-6 md:mt-0 w-full text-left md:text-right">
+                            <span class="text-brand-primary font-bold font-heading text-xl">2023 — 2027</span>
+                        </div>
+                        <!-- Node -->
+                        <div class="absolute left-0 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-4 h-4 rounded-full bg-slate-900 border-2 border-brand-primary shadow-glow z-10 timeline-node"></div>
+                        
+                        <div class="md:w-5/12 pl-8 md:pl-10 order-3 md:order-3 w-full">
+                            <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-brand-primary"></div>
+                                <h3 class="text-xl font-bold text-white mb-1">B.Tech (CSE - AIML)</h3>
+                                <h4 class="text-brand-primary font-medium mb-3">Malla Reddy University</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Specializing in Artificial Intelligence and Machine Learning. 
+                                    Focusing on Deep Tech systems, predictive modeling, and real-world AI applications. <br/>
+                                    <span class="inline-block mt-2 text-slate-200">Highlight: "Industry-Ready AI Professional"</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 reveal-up stagger-1">
+                        <div class="md:w-5/12 pr-8 md:pr-10 order-3 md:order-1 w-full mt-6 md:mt-0">
+                            <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group text-left md:text-right">
+                                <div class="absolute top-0 right-0 w-1 h-full bg-brand-secondary"></div>
+                                <h3 class="text-xl font-bold text-white mb-1">Intermediate Education</h3>
+                                <h4 class="text-brand-secondary font-medium mb-3">Pre-University</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Rigorous foundation in Mathematics, Physics, and Chemistry essential for advanced computer science computations.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Node -->
+                        <div class="absolute left-0 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-4 h-4 rounded-full bg-slate-900 border-2 border-brand-secondary z-10 timeline-node group-hover:bg-brand-secondary transition-colors"></div>
+                        
+                        <div class="md:w-5/12 flex justify-start pl-8 order-2 md:order-3 w-full text-left">
+                            <span class="text-brand-secondary font-bold font-heading text-xl">2021 — 2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between reveal-up stagger-2">
+                        <div class="md:w-5/12 flex justify-end pr-8 order-2 md:order-1 mt-6 md:mt-0 w-full text-left md:text-right">
+                            <span class="text-slate-500 font-bold font-heading text-xl">2021</span>
+                        </div>
+                        <!-- Node -->
+                        <div class="absolute left-0 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-600 z-10 timeline-node"></div>
+                        
+                        <div class="md:w-5/12 pl-8 md:pl-10 order-3 md:order-3 w-full">
+                            <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
+                                <h3 class="text-xl font-bold text-white mb-1">Secondary Education</h3>
+                                <h4 class="text-slate-400 font-medium mb-3">High School</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed">
+                                    Early exposure to foundational logic and problem-solving methodologies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- === KNOWLEDGE MATRIX (BENTO GRID) === -->
+        <section id="skills" class="py-20 md:py-32 bg-slate-900/40 relative">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05)_0,transparent_60%)] pointer-events-none"></div>
+            
+            <div class="container mx-auto max-w-[1200px] px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 reveal-up">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Knowledge Matrix</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">A structured overview of technical competencies across disciplines.</p>
+                </div>
+
+                <div class="bento-grid">
+                    
+                    <!-- AI & ML Box -->
+                    <div class="bento-item-ai glass-panel p-8 rounded-3xl relative overflow-hidden group flex flex-col justify-end reveal-up hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:border-brand-primary/50 transition-all duration-500">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-10 group-hover:opacity-[0.15] transition-all duration-700 group-hover:scale-110 mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30"></div>
+                        <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-primary/20 blur-[80px] rounded-full group-hover:bg-brand-primary/40 group-hover:scale-125 transition-all duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <!-- Icon -->
+                            <div class="w-12 h-12 rounded-xl bg-brand-primary/20 border border-brand-primary/30 flex items-center justify-center text-brand-primary mb-6 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 font-heading tracking-wide group-hover:text-brand-primary transition-colors duration-300">Artificial Intelligence & ML</h3>
+                            <ul class="flex flex-wrap gap-2">
+                                <li class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:bg-brand-primary/20 hover:border-brand-primary hover:text-white hover:scale-105 cursor-default transition-all shadow-glow">Machine Learning</li>
+                                <li class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:bg-brand-primary/20 hover:border-brand-primary hover:text-white hover:scale-105 cursor-default transition-all shadow-glow">Deep Learning</li>
+                                <li class="px-3 py-1 bg-brand-primary/10 border border-brand-primary/30 rounded-lg text-sm text-brand-primary font-bold hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:scale-105 cursor-default transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.6)]">Generative AI</li>
+                                <li class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:bg-brand-primary/20 hover:border-brand-primary hover:text-white hover:scale-105 cursor-default transition-all shadow-glow">Reinforcement Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Systems Box -->
+                    <div class="bento-item-systems glass-panel p-6 md:p-8 rounded-3xl relative overflow-hidden group reveal-up stagger-1 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(249,115,22,0.2)] hover:border-brand-secondary/40 transition-all duration-500">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-[0.05] group-hover:opacity-10 transition-all duration-700 group-hover:scale-110 mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-slate-950/70"></div>
+                        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brand-secondary/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        
+                        <div class="relative z-10 h-full flex flex-col justify-between">
+                            <h3 class="text-xl font-bold text-white mb-4 font-heading group-hover:text-brand-secondary transition-colors duration-300">Core Systems</h3>
+                            <div class="space-y-4">
+                                <div class="group/bar cursor-default hover:scale-[1.03] transition-transform">
+                                    <div class="flex justify-between text-sm mb-1"><span class="text-slate-400 group-hover/bar:text-white transition-colors">Operating Systems</span><span class="text-white font-bold group-hover/bar:text-brand-secondary transition-colors">90%</span></div>
+                                    <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden"><div class="bg-brand-secondary h-full rounded-full group-hover/bar:shadow-[0_0_10px_#f97316] group-hover:animate-pulse transition-all" style="width: 90%"></div></div>
+                                </div>
+                                <div class="group/bar cursor-default hover:scale-[1.03] transition-transform">
+                                    <div class="flex justify-between text-sm mb-1"><span class="text-slate-400 group-hover/bar:text-white transition-colors">Linux Programming</span><span class="text-white font-bold group-hover/bar:text-brand-secondary transition-colors">85%</span></div>
+                                    <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden"><div class="bg-brand-secondary h-full rounded-full group-hover/bar:shadow-[0_0_10px_#f97316] group-hover:animate-pulse transition-all delay-75" style="width: 85%"></div></div>
+                                </div>
+                                <div class="group/bar cursor-default hover:scale-[1.03] transition-transform">
+                                    <div class="flex justify-between text-sm mb-1"><span class="text-slate-400 group-hover/bar:text-white transition-colors">Algorithms (DAA)</span><span class="text-white font-bold group-hover/bar:text-brand-secondary transition-colors">88%</span></div>
+                                    <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden"><div class="bg-brand-secondary h-full rounded-full group-hover/bar:shadow-[0_0_10px_#f97316] group-hover:animate-pulse transition-all delay-150" style="width: 88%"></div></div>
+                                </div>
+                                <div class="group/bar cursor-default hover:scale-[1.03] transition-transform">
+                                    <div class="flex justify-between text-sm mb-1"><span class="text-slate-400 group-hover/bar:text-white transition-colors">IoT Integrations</span><span class="text-white font-bold group-hover/bar:text-brand-secondary transition-colors">75%</span></div>
+                                    <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden"><div class="bg-brand-secondary h-full rounded-full group-hover/bar:shadow-[0_0_10px_#f97316] group-hover:animate-pulse transition-all delay-200" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Box -->
+                    <div class="bento-item-dev glass-panel p-6 md:p-8 rounded-3xl relative overflow-hidden group reveal-up stagger-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(16,185,129,0.2)] hover:border-emerald-500/40 transition-all duration-500">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-[0.05] group-hover:opacity-10 transition-all duration-700 group-hover:scale-110 mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-slate-950/70"></div>
+                        <div class="absolute inset-0 bg-gradient-to-bl from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        
+                         <div class="relative z-10 h-full flex flex-col">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(16,185,129,0.6)] transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-6 font-heading group-hover:text-emerald-400 transition-colors duration-300">Software Dev</h3>
+                            
+                            <div class="grid grid-cols-2 gap-4 mt-auto">
+                                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center hover:scale-[1.05] hover:-translate-y-1 hover:bg-emerald-500/10 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] cursor-default transition-all duration-300 group/icon">
+                                    <span class="text-2xl font-bold text-emerald-400 mb-1 group-hover/icon:text-emerald-300 group-hover/icon:drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">Py</span>
+                                    <span class="text-xs text-slate-400 group-hover/icon:text-white transition-colors">Python</span>
+                                </div>
+                                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center hover:scale-[1.05] hover:-translate-y-1 hover:bg-emerald-500/10 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] cursor-default transition-all duration-300 group/icon">
+                                    <span class="text-2xl font-bold text-white mb-1 group-hover/icon:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]"><svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999a9.997 9.997 0 006.838 9.488c.5.092.682-.217.682-.482v-1.705c-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.254-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852v2.75c0 .267.18.577.688.48A10.002 10.002 0 0022.001 12A10.001 10.001 0 0012.001 2.002z"/></svg></span>
+                                    <span class="text-xs text-slate-400 group-hover/icon:text-white transition-colors">Git/GitHub</span>
+                                </div>
+                                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center hover:scale-[1.05] hover:-translate-y-1 hover:bg-emerald-500/10 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] cursor-default transition-all duration-300 group/icon">
+                                    <span class="text-2xl font-bold text-emerald-400 mb-1 group-hover/icon:text-emerald-300 group-hover/icon:drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">J</span>
+                                    <span class="text-xs text-slate-400 group-hover/icon:text-white transition-colors">Java</span>
+                                </div>
+                                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center hover:scale-[1.05] hover:-translate-y-1 hover:bg-emerald-500/10 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] cursor-default transition-all duration-300 group/icon">
+                                    <span class="text-2xl font-bold text-emerald-400 mb-1 group-hover/icon:text-emerald-300 group-hover/icon:drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">DB</span>
+                                    <span class="text-xs text-slate-400 group-hover/icon:text-white transition-colors">DBMS / SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Box -->
+                    <div class="bento-item-adv glass-panel p-6 md:p-8 rounded-3xl relative overflow-hidden group reveal-up stagger-3 flex flex-col justify-center hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:border-purple-500/40 transition-all duration-500">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-[0.08] group-hover:opacity-[0.15] transition-all duration-700 group-hover:scale-110 mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-slate-950/60"></div>
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500/10 blur-[50px] rounded-full group-hover:bg-purple-500/30 group-hover:scale-150 transition-all duration-700"></div>
+                        
+                        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-heading group-hover:text-purple-400 transition-colors duration-300">Advanced Analytics & Theory</h3>
+                                <p class="text-slate-400 text-sm max-w-sm">Diving deep into large-scale data processing architectures and theoretical computer science frameworks.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-purple-500/10 text-purple-300 border border-purple-500/20 px-4 py-2 rounded-xl text-sm font-medium hover:bg-purple-500 hover:text-white hover:border-purple-400 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] cursor-default transition-all duration-300">Big Data Analytics</span>
+                                <span class="bg-purple-500/10 text-purple-300 border border-purple-500/20 px-4 py-2 rounded-xl text-sm font-medium hover:bg-purple-500 hover:text-white hover:border-purple-400 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] cursor-default transition-all duration-300">Data Warehousing</span>
+                                <span class="bg-purple-500/10 text-purple-300 border border-purple-500/20 px-4 py-2 rounded-xl text-sm font-medium hover:bg-purple-500 hover:text-white hover:border-purple-400 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] cursor-default transition-all duration-300">Automata Theory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- === WORK / EXPERIENCE SECTION === -->
+        <section id="work" class="py-20 md:py-32 relative">
+            <div class="container mx-auto max-w-[1200px] px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-up">
+                    <div>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Featured Work & exposure</h2>
+                        <div class="h-1 w-20 bg-brand-primary rounded-full mb-4 md:mb-0"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-5xl lg:mx-auto">
+                    
+                    <!-- Card 1: Classroom Observer -->
+                    <div class="glass-panel rounded-3xl overflow-hidden group reveal-up flex flex-col hover:shadow-glow transition-all duration-300">
+                        <!-- Image Container -->
+                        <div class="h-48 relative overflow-hidden bg-slate-800">
+                            <!-- Placeholder Image -> You can replace the src when a project exists -->
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000" alt="Classroom Observer System" class="w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                            
+                            <!-- Internal Badge -->
+                            <div class="absolute top-4 left-4">
+                                <span class="text-[10px] font-bold tracking-wider uppercase text-brand-primary bg-brand-primary/10 backdrop-blur-md px-3 py-1 rounded-full border border-brand-primary/20">Classroom AI</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">Classroom Observer System</h3>
+                                <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                                    Developed an AI-based system that automatically tracks student attendance and analyzes overall performance based on attendance and academic marks. The system helps in generating performance insights and supports data-driven evaluation of students.
+                                </p>
+                            </div>
+                            <!-- Tech Stack -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">Artificial Intelligence</span>
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">Data Analytics</span>
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">Automation</span>
+                            </div>
+                            
+                            <a href="#" class="inline-flex items-center text-sm font-medium text-brand-primary hover:text-white transition-colors group/link mt-auto">
+                                View Project 
+                                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Hospital Flow -->
+                    <div class="glass-panel rounded-3xl overflow-hidden group reveal-up stagger-1 flex flex-col hover:shadow-glow transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden bg-slate-800">
+                            <!-- Placeholder -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-brand-secondary/40 to-slate-900 group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-40 mix-blend-luminosity group-hover:scale-110 group-hover:opacity-70 transition-all duration-500"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="text-[10px] font-bold tracking-wider uppercase text-brand-secondary bg-brand-secondary/10 backdrop-blur-md px-3 py-1 rounded-full border border-brand-secondary/20">Healthcare</span>
+                                <span class="text-[10px] font-bold tracking-wider uppercase text-emerald-400 bg-emerald-400/10 backdrop-blur-md px-3 py-1 rounded-full border border-emerald-400/20 shadow-[0_0_10px_#10b981]">Ongoing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-brand-secondary transition-colors">Hospital Flow Management System</h3>
+                                <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                                    Currently working on a system designed to optimize hospital operations by improving patient flow, reducing waiting times, and enabling efficient resource management through intelligent monitoring.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">System Design</span>
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">Resource Optimization</span>
+                                <span class="text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded">Healthcare Tech</span>
+                            </div>
+                            
+                            <a href="#" class="inline-flex items-center text-sm font-medium text-brand-secondary hover:text-white transition-colors group/link mt-auto">
+                                View Project 
+                                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- === CERTIFICATIONS SECTION === -->
+        <section id="certifications" class="py-20 md:py-32 bg-slate-900/40 relative">
+            <div class="container mx-auto max-w-[1200px] px-6 lg:px-8">
+                <div class="mb-16 reveal-up text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+                    <div>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Certifications & Achievements</h2>
+                        <div class="h-1 w-20 bg-brand-primary rounded-full mx-auto md:mx-0"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                    
+                    <!-- Cert 1: Google AI-ML -->
+                    <div class="glass-panel p-4 rounded-3xl flex flex-col items-center text-center group reveal-up hover:-translate-y-2 transition-transform">
+                        <div class="w-full aspect-[4/3] bg-slate-800 rounded-2xl mb-4 overflow-hidden relative">
+                            <!-- Real Google Image Link -->
+                            <img src="assets/google-cert.jpg" alt="Google AI-ML Virtual Internship" class="w-full h-full object-cover mix-blend-overlay group-hover:mix-blend-normal opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-2 leading-tight">AI-ML Virtual Internship</h3>
+                        <p class="text-[11px] text-brand-primary uppercase font-bold tracking-wider">Google for Developers</p>
+                    </div>
+
+                    <!-- Cert 2: AWS Cloud -->
+                    <div class="glass-panel p-4 rounded-3xl flex flex-col items-center text-center group reveal-up stagger-1 hover:-translate-y-2 transition-transform">
+                        <div class="w-full aspect-[4/3] bg-slate-800 rounded-2xl mb-4 overflow-hidden relative">
+                            <img src="assets/aws-cert.png" alt="AWS Academy Cloud Foundations" class="w-full h-full object-cover mix-blend-overlay group-hover:mix-blend-normal opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-2 leading-tight">Cloud Foundations</h3>
+                        <p class="text-[11px] text-brand-secondary uppercase font-bold tracking-wider">AWS Academy Graduate</p>
+                    </div>
+
+                    <!-- Cert 3: Swecha Viswam.ai -->
+                    <div class="glass-panel p-4 rounded-3xl flex flex-col items-center text-center group reveal-up stagger-2 hover:-translate-y-2 transition-transform">
+                        <div class="w-full aspect-[4/3] bg-slate-800 rounded-2xl mb-4 overflow-hidden relative">
+                            <img src="assets/swecha-cert.png" alt="Summer of AI Internship" class="w-full h-full object-cover mix-blend-overlay group-hover:mix-blend-normal opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-2 leading-tight">Summer of AI Internship</h3>
+                        <p class="text-[11px] text-emerald-400 uppercase font-bold tracking-wider">Swecha / Meta / Viswam.ai</p>
+                    </div>
+
+                    <!-- Cert 4: LearnQuest Java -->
+                    <div class="glass-panel p-4 rounded-3xl flex flex-col items-center text-center group reveal-up stagger-3 hover:-translate-y-2 transition-transform">
+                        <div class="w-full aspect-[4/3] bg-slate-800 rounded-2xl mb-4 overflow-hidden relative">
+                            <img src="assets/javalang-cert.jpg" alt="The Java Language" class="w-full h-full object-cover mix-blend-overlay group-hover:mix-blend-normal opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-2 leading-tight">The Java Language</h3>
+                        <p class="text-[11px] text-blue-400 uppercase font-bold tracking-wider">Coursera / LearnQuest</p>
+                    </div>
+
+                    <!-- Cert 5: be10x -->
+                    <div class="glass-panel p-4 rounded-3xl flex flex-col items-center text-center group reveal-up stagger-4 hover:-translate-y-2 transition-transform xl:col-span-1 md:col-span-2 md:mx-auto xl:mx-0 w-full md:w-1/2 xl:w-full">
+                        <div class="w-full aspect-[4/3] bg-slate-800 rounded-2xl mb-4 overflow-hidden relative">
+                            <img src="assets/be10x.jpg" alt="AI Tools and ChatGPT" class="w-full h-full object-cover mix-blend-overlay group-hover:mix-blend-normal opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-2 leading-tight">AI Tools & ChatGPT Workshop</h3>
+                        <p class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">be10x</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER & CONTACT CTA === -->
+    <footer id="contact" class="py-20 md:py-32 relative border-t border-white/5 bg-slate-900/40">
+        <!-- Glow effects -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-brand-primary to-transparent opacity-50"></div>
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 blur-[120px] rounded-[100%] pointer-events-none"></div>
+
+        <div class="container mx-auto max-w-4xl px-6 lg:px-8 text-center relative z-10 reveal-up">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Let’s Build Something Intelligent Together</h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-12">
+                Whether it’s innovating AI solutions, building complex systems, or solving real-world problems, I’m open to collaboration and career opportunities.
+            </p>
+
+            <a href="cv.html" class="inline-block btn-primary rounded-full px-10 py-4 text-lg font-bold text-white shadow-glow-primary hover:scale-105 transition-transform duration-300 mb-16">
+                Download Full CV
+            </a>
+
+            <!-- Social Links (Neon Glow) -->
+            <div class="flex items-center justify-center gap-6">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/vamshi-krishna-gonuguntla-4a6b34324" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-2xl glass-panel flex items-center justify-center text-slate-300 hover:text-brand-primary hover:border-brand-primary transition-all duration-300 group shadow-glow">
+                    <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/Vamshi7279" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-2xl glass-panel flex items-center justify-center text-slate-300 hover:text-white hover:border-white transition-all duration-300 group hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                    <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/vamshi.kr__/" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-2xl glass-panel flex items-center justify-center text-slate-300 hover:text-pink-400 hover:border-pink-400 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(244,114,182,0.3)]">
+                    <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/script.js"></script>
+</body>
+</html>
